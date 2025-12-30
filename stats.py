@@ -5,5 +5,6 @@ def get_book_text(file_path):
     return file_content
 
 def book_text_word_cnt(input_book):
-    split_book = input_book.split()
+    book_to_split = get_book_text(input_book)
+    split_book = book_to_split.split()
     return len(split_book)
