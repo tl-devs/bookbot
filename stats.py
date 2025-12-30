@@ -17,4 +17,12 @@ def book_text_char_cnt(input_book):
     for i in book_to_char:
         char_dict[i] += 1
 
-    return char_dict
+    sorted_char_dict = {}
+
+    for key in sorted(char_dict, key=char_dict.get, reverse=True):
+        sorted_char_dict[key] = char_dict[key]
+
+    return sorted_char_dict
+
+def sort_on(items):
+    return items["num"]
